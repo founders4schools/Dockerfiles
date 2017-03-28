@@ -1,7 +1,7 @@
 FROM founders4schools/dockerfiles:py3
 
 # Command lines utils that needs to be in the PATH
-RUN pip install coverage codecov fabric3
+RUN pip3 install coverage codecov fabric3 flake8
 
 # Install Heroku CLI
 RUN wget https://cli-assets.heroku.com/branches/stable/heroku-linux-amd64.tar.gz && \
