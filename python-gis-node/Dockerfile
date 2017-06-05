@@ -1,7 +1,7 @@
 FROM python:2.7-alpine
 
 # Install GEOS and GDAL
-RUN apt-get update && apt-get install -y libgeos-dev libgdal-dev python-gdal
+RUN apk add libgeos-dev libgdal-dev python-gdal
 
 # Install Nodejs 6
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 68576280 86E50310 && \
