@@ -1,4 +1,4 @@
-FROM founders4schools/dockerfiles:py2
+FROM founders4schools/dockerfiles:py2.7-alpine
 
 # Command lines utils that needs to be in the PATH
 RUN pip install coverage codecov fabric flake8
