@@ -1,4 +1,4 @@
-FROM founders4schools/dockerfiles:py3
+FROM founders4schools/dockerfiles:py3.6
 
 # Command lines utils that needs to be in the PATH
 RUN pip3 install coverage codecov fabric3 flake8
