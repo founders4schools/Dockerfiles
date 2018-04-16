@@ -12,3 +12,11 @@ services:
 
 script:
   - docker build -t founders4schools/dockerfiles:$TAG $DOCKER_FILE_PATH
+
+notifications:
+  slack:
+    rooms:
+      - f4s:u17h2Cc7RhhHNtypnAu7jbgY#dev
+    on_success: change
+    on_failure: always
+  email: false
