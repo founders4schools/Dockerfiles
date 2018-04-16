@@ -20,3 +20,9 @@ notifications:
     on_success: change
     on_failure: always
   email: false
+
+deploy:
+  provider: script
+  script: bash docker_push.sh
+  on:
+    branch: master
