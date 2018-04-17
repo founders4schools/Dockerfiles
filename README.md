@@ -1,6 +1,6 @@
 # Dockerfiles
 
-[![Build Status](https://travis-ci.org/founders4schools/Dockerfiles.svg?branch=master)](https://travis-ci.org/founders4schools/Dockerfiles
+[![Build Status](https://travis-ci.org/founders4schools/Dockerfiles.svg?branch=master)](https://travis-ci.org/founders4schools/Dockerfiles)
 
 Repo to keep interesting Dockerfiles. Install the image you want from
 [DockerHub](https://hub.docker.com/r/founders4schools/dockerfiles/tags/),
