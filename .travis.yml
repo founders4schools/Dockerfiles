@@ -2,8 +2,6 @@ sudo: required
 
 env:
   - DOCKER_FILE_PATH=./elasticsearch/6.1.1/ TAG=es6.1.1
-  - DOCKER_FILE_PATH=./nodejs/6/ TAG=node6
-  - DOCKER_FILE_PATH=./nodejs/8/ TAG=node8
   - DOCKER_FILE_PATH=./python-gis-node/python3/ TAG=py3.6
   - DOCKER_FILE_PATH=./python-gis-node/python3/circle-ci/ TAG=py3.6-ci
 
