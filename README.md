@@ -11,26 +11,25 @@ FROM founders4schools/dockerfiles:[tag]
 ...
 ```
 
-## Webserver
+## Images
+
+### Webserver
 
 The webserver images are under the `python-gis-node` folder.
-The structure is divided between Python 2 and Python 3 base images.
 
-Each base image is installing the GEOS, GDAL and Python GDAL libraries,
-which are needed by a Webserver that is using PostGIS.
+### Base image
 
-Each image also install Node.js, which is needed to manage & build
-static assets.
+The first file is providing a base image, installing the GEOS, GDAL 
+and Python GDAL libraries, which are needed by a Webserver that 
+is using PostGIS. They is using the tags `py3` on DockerHub, but it
+is currently unused.
 
-They are using the tags `py2` and `py3` on DockerHub.
+#### Circle CI 2.0
 
-### Circle CI 2.0
+Webserver image has an extension for Circle CI, which installs Node, the Heroku
+CLI and a couple of command line utilities. They is called `py3-ci` respectively.
 
-Each Webserver image has an extension for Circle CI, which install the Heroku
-CLI and a couple of command line utilities. They are called `py2-ci` and
-`py3-ci` respectively.
-
-For instance you would use the python 2 image from the Circle CI config:
+For instance you would use the python 3 image from the Circle CI config:
 
 ```yaml
 version: 2
@@ -38,16 +37,20 @@ jobs:
   build:
     working_directory: ~/work-dir
     docker:
-      - image: founders4schools/dockerfiles:py2-ci
+      - image: founders4schools/dockerfiles:py3-ci
 ```
 
-## Elasticsearch [WIP]
+### Elasticsearch
 
-I've started adding images for Elasticsearch v5, on the `elasticsearch` branch.
-The tag currently available is `es5.2`.
+The images to provided a configured Elasticsearch image, the main thing they do is
+adding a configuration.
+
+## Deployment
+
+Images are build using Travis-CI, each environment specifies the mapping between the
+Dockerfile path and the tag on Docker hub. Images are automatically published on each
+pushed to master.
 
 ## TODO
 
 * Try to base our images on the alpine ones, that should make them much smaller
-* The segmentation of images isn't great. Pushing on master rebuild all
-  python images.
