@@ -5,7 +5,10 @@ env:
   - DOCKER_FILE_PATH=./elasticsearch/6.2.4/ TAG=es6.2.4
   - DOCKER_FILE_PATH=./python-gis/3.6/ TAG=py3.6
   - DOCKER_FILE_PATH=./python-gis/3.6/ci/ TAG=py3.6-ci
-  - DOCKER_FILE_PATH=./python-gis-node/python3/circle-ci/ TAG=py3.6-node-ci
+  - DOCKER_FILE_PATH=./python-gis-node/3.6/circle-ci/ TAG=py3.6-node-ci
+  - DOCKER_FILE_PATH=./python-gis/3.7/ TAG=py3.7
+  - DOCKER_FILE_PATH=./python-gis/3.7/ci/ TAG=py3.7-ci
+  - DOCKER_FILE_PATH=./python-gis-node/3.7/circle-ci/ TAG=py3.7-node-ci
 
 services:
   - docker
