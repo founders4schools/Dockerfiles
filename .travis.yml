@@ -9,7 +9,7 @@ env:
   - DOCKER_FILE_PATH=./python-gis/3.7/ TAG=py3.7.0
   - DOCKER_FILE_PATH=./python-gis/3.7/ci/ TAG=py3.7.0-ci
   - DOCKER_FILE_PATH=./python-gis-node/3.7/circle-ci/ TAG=py3.7.0-node-ci
-  - DOCKER_FILE_PATH=./nodejs/8.12/ TAG=node8-chromium
+  - DOCKER_FILE_PATH=./nodejs/8.12/ TAG=node8.12-chromium
 
 services:
   - docker
