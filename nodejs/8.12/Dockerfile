@@ -1,4 +1,4 @@
-FROM node:8.12.0-alpine
+FROM node:8.16.0-alpine
 
 # Un-break Node's bogarting of UID 1000
 RUN apk --update --no-cache --virtual .build-deps add shadow \
