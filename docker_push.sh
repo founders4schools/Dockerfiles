@@ -1,5 +1,7 @@
 #!/bin/bash
+set -e
 
-echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}" docker.io
 
-docker push founders4schools/dockerfiles:${TAG}
+docker build -t foundersforschools/dockerfiles:${TAG} ${TAG}
+docker push foundersforschools/dockerfiles:${TAG}
