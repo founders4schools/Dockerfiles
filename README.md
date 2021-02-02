@@ -1,5 +1,7 @@
 # Dockerfiles
 
+**ARCHIVED**: This repo has been archived in favour of provisioning directory in founders4schools/founders-for-schools repo. Please refer to docker/README.md file in there.
+
 **CAUTION:** Don't mistake *foundersforschools* Dockerhub organisation with *founders4schools*, to which credentials were lost with our long-departed colleagues.
 
 Most Dockerfiles are kept in founders4schools repository, provisioning/docker directory.
